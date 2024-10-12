@@ -74,13 +74,13 @@ export default function StockMarket() {
       });
     };
 
-    // ws.onerror = (error) => {
-    //   console.error("WebSocket error =>", error);
-    // };
+    ws.onerror = (error) => {
+      console.error("WebSocket error =>", error);
+    };
 
-    // ws.onclose = (event) => {
-    //   console.log("WebSocket connection closed =>", event);
-    // };
+    ws.onclose = (event) => {
+      console.log("WebSocket connection closed =>", event);
+    };
 
     let debounceTimeout: NodeJS.Timeout;
     const debounceUpdate = (updatedStocks: any[]) => {
